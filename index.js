@@ -51,7 +51,8 @@ var makeLabel = function(options) {
   const values = new ValuesJS("#" + color)
   const bgcolor = options.bgcolor || values.shade(50).hexString();
   const fgcolor = options.fgcolor || values.tint(50).hexString();
-  console.log(getBrightness(color))
+  console.log("fgcolor: " + fgcolor)
+  console.log("bgcolor: " + bgcolor)
   const strokecolor = options.strokecolor || fgcolor;
 
   return (
