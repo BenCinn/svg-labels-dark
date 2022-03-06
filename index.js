@@ -46,13 +46,24 @@ var makeLabel = function(options) {
   const roundness = Math.round(height / 2)
   const strokeopacity = +options.strokeopacity || 1;
   const strokewidth = +options.strokewidth || Math.max(1, Math.round(height * 0.05));
-  const color = options.color || 'd73a4a';
-  const values = new ValuesJS("#" + color)
-  const bgcolor = options.bgcolor || values.shade(50).hexString();
-  const fgcolor = options.fgcolor || colorlib(values.tint(84.451).hexString()).saturate(17).hex();
-  const strokecolor = options.strokecolor || fgcolor;
+  const dim = options.dimtheme || 'false';
+  let values;
+  let bgcolor;
+  let fgcolor;
+  let strokecolor;
+  if (dim == 'true') {
+    values = new ValuesJS(getHexColor(options.bgcolor) || '#ee0701');
+    bgcolor = values.shade(50).hexString();
+    fgcolor = options.fgcolor || colorlib(values.tint(84.451).hexString()).saturate(17).hex();
+    strokecolor = options.strokecolor || fgcolor;
+  } else {
+      bgcolor = getHexColor(options.bgcolor) || '#ee0701';
+      fgcolor = getHexColor(options.fgcolor) || (getBrightness(bgcolor) > 140.5 ? '#333026' : '#fff');
+      strokecolor = getHexColor(options.strokecolor) || '#273135';
+    }
   const boxwidth = width + 4
   const boxheight = height + 4
+
 
   return (
 `<svg xmlns="http://www.w3.org/2000/svg" width="${boxwidth}" height="${boxheight}">
