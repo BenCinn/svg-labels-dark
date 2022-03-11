@@ -1,6 +1,6 @@
 ## svg-labels-dark
 
-Generate <sub>![awesome](https://svg-labels-dark.herokuapp.com/svg?text=awesome&bgcolor=0052cc)</sub> GitHub-style labels in SVG, But in dark mode!!
+Generate <sub>![awesome](https://svg-labels-dark.herokuapp.com/svg?text=awesome&bgcolor=0052cc&dimtheme=true)</sub> GitHub-style labels in SVG, But in dark mode!!
 
 ### What is it?
 
@@ -11,13 +11,13 @@ text and colors.
 We can get around this by styling the text and colors in an SVG "image" and
 embedding that instead:
 
-![bug](https://svg-labels-dark.herokuapp.com/svg?text=bug&color=ee0701)
-![duplicate](https://svg-labels-dark.herokuapp.com/svg?text=duplicate&color=cccccc)
-![enhancement](https://svg-labels-dark.herokuapp.com/svg?text=enhancement&color=84b6eb)
-![help wanted](https://svg-labels-dark.herokuapp.com/svg?text=help%20wanted&color=128A0C)
-![invalid](https://svg-labels-dark.herokuapp.com/svg?text=invalid&color=e6e6e6)
-![question](https://svg-labels-dark.herokuapp.com/svg?text=question&color=cc317c)
-![wontfix](https://svg-labels-dark.herokuapp.com/svg?text=wontfix&color=ffffff)
+![bug](https://svg-labels-dark.herokuapp.com/svg?text=bug&bgcolor=ee0701&dimtheme=true)
+![duplicate](https://svg-labels-dark.herokuapp.com/svg?text=duplicate&bgcolor=cccccc&dimtheme=true)
+![enhancement](https://svg-labels-dark.herokuapp.com/svg?text=enhancement&bgcolor=84b6eb&dimtheme=true)
+![help wanted](https://svg-labels-dark.herokuapp.com/svg?text=help%20wanted&bgcolor=128A0C&dimtheme=true)
+![invalid](https://svg-labels-dark.herokuapp.com/svg?text=invalid&bgcolor=e6e6e6&dimtheme=true)
+![question](https://svg-labels-dark.herokuapp.com/svg?text=question&bgcolor=cc317c&dimtheme=true)
+![wontfix](https://svg-labels-dark.herokuapp.com/svg?text=wontfix&bgcolor=ffffff&dimtheme=true)
 
 The code for this is based/forked from [labl.es](https://labl.es) and now hosted at [svg-labels-dark.herokuapp.com](https://svg-labels-dark.herokuapp.com/).
 
@@ -57,7 +57,7 @@ This is the same code that serves up [labl.es](https://labl.es).
 
 ### Bugs
 
-There may be <img align=center src="https://svg-labels-dark.herokuapp.com/svg?text=bugs&color=ee0701" /> !
+There may be <img align=center src="https://svg-labels-dark.herokuapp.com/svg?text=bugs&color=ee0701&dimtheme=true" /> !
 
 Report any issues here:  https://github.com/BenCinn/svg-labels-dark/issues
 
