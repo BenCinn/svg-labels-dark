@@ -37,7 +37,6 @@ It works just like similar badge generator sites like [shields.io](https://shiel
 | option.width         | number | calculated        | Label width - calculated based on fontsize, but you can override it. |
 | option.strokeopacity | number | 0.12              | Opacity for the shadow outline. |
 | option.strokewidth   | number | calculated        | Shadow stroke width - also calculated but you can override it. |
-| option.color         | hex    | d73a4a            | Hex of the color you want.
 | option.bgcolor       | hex    | calculated        | Background color of the label. |
 | option.fgcolor       | hex    | calculated        | Foreground color of the label - calculated for light/dark backgrounds but you can override it. |
 | option.strokecolor   | hex    | calculated        | Stroke color for the shadow outline. |
