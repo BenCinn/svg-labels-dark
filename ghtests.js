@@ -45,8 +45,8 @@ function getbranch(user, repo) {
 var labelgen = function labelgen(options) {
   // Start new Promise session
   return new Promise((resolve, reject) => {
-    user = options.user || "nodejs";
-    repo = options.repo || "node";
+    user = options.user;
+    repo = options.repo;
     labeloptions = options || {};
     // Get if users exist or not
     getexist(user, repo).then(function (res) {
@@ -63,7 +63,7 @@ var labelgen = function labelgen(options) {
             labeloptions.bgcolor = "#f5426c";
           }
           labeloptions.text = out;
-          labeloptions.dimtheme = options.dimtheme || "false";
+          labeloptions.dimtheme = options.dimtheme;
           console.log(labeloptions.dimtheme)
           output = makeLabel(labeloptions);
           resolve(output);
