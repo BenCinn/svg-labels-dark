@@ -63,7 +63,7 @@ var labelgen = function labelgen(options) {
             labeloptions.bgcolor = "#f5426c";
           }
           labeloptions.text = out;
-          labeloptions.dimtheme = true;
+          labeloptions.dimtheme = "true";
           output = makeLabel(labeloptions);
           resolve(output);
         });
