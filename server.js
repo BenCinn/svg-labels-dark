@@ -18,7 +18,8 @@ app
     res.set("Cache-control", "public, max-age=300, s-maxage=300");
     let username = req.query.user || "nodejs";
     let repo = req.query.repo || "node";
-    labelGen({ user: username, repo: repo }).then(function (output) {
+    let dim = req.query.dimtheme || "false"
+    labelGen({ user: username, repo: repo, dimtheme: dim }).then(function (output) {
       res.send(output);
     });
   });
