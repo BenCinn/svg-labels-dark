@@ -14,7 +14,8 @@ app
   })
   .get("/tests", (req, res) => {
     res.set("Content-Type", "image/svg+xml");
-    res.set("Cache-control", "public, max-age=5478, s-maxage=5478");
+    let cachetime = req.query.cache || "4000"
+    res.set("Cache-control", "public, max-age=" + cachetime + ", s-maxage=" + cachetime);
     let username = req.query.user || "nodejs";
     let repo = req.query.repo || "node";
     let dim = req.query.dimtheme || "false";
