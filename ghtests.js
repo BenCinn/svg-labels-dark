@@ -77,7 +77,7 @@ var labelgen = function labelgen(options) {
           } else if (out == "failure") {
             labeloptions.bgcolor = "#f5426c";
           }
-          labeloptions.text = out;
+          labeloptions.text = "Build: " + out;
           labeloptions.dimtheme = options.dimtheme;
           output = makeLabel(labeloptions);
           resolve(output);
