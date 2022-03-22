@@ -1,7 +1,6 @@
 const exp = require("express");
 const app = exp();
 const makeLabel = require(".");
-const labelgen = require("./ghtests");
 const labelGen = require("./ghtests");
 
 app
