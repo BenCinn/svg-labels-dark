@@ -34,11 +34,26 @@ function getexist(user, repo) {
 
 function getbranch(user, repo) {
   return new Promise(function (resolve, reject) {
-    let stats = fetch("https://api.github.com/repos/" + user + "/" + repo)
-      .then((res) => res.json())
-      .then((json) => {
-        resolve(json.default_branch);
-      });
+    if (process.env.USERTOKEN) {
+      let stats = fetch("https://api.github.com/repos/" + user + "/" + repo, {
+        method: "GET",
+        headers: {
+          Authorization: "Basic " + btoa(process.env.USERTOKEN),
+        },
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          resolve(json.default_branch);
+        });
+    } else {
+      let stats = fetch("https://api.github.com/repos/" + user + "/" + repo, {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          resolve(json.default_branch);
+        });
+    }
   });
 }
 
@@ -64,7 +79,6 @@ var labelgen = function labelgen(options) {
           }
           labeloptions.text = out;
           labeloptions.dimtheme = options.dimtheme;
-          console.log(labeloptions.dimtheme)
           output = makeLabel(labeloptions);
           resolve(output);
         });
